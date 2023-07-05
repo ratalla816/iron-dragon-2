@@ -148,6 +148,7 @@ function decreaseTimer() {
   if (player.health === enemy.health) {
     document.querySelector('#displayText').innerHTML = 'Tie'
     } else if (player.health > enemy.health) {
+      // Player with least damage at timeout wins 
     document.querySelector('#displayText').innerHTML = 'Player One Wins'
     } else if (player.health < enemy.health) {
     document.querySelector('#displayText').innerHTML = 'Player Two Wins'
