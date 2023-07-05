@@ -266,5 +266,9 @@ window.addEventListener('keyup', (event) => {
    case 'ArrowUp':
       keys.ArrowUp.pressed = false
       break
-  }
+   }
 })
+
+// case 'ArrowDown':   
+//       keys.ArrowDown.pressed = false
+//       break
