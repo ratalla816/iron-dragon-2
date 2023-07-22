@@ -136,8 +136,10 @@ class Sprite {
         }
       break
       case 'jump':
-        this.image = this.sprites.jump.image
-        this.framesMax = this.sprites.jump.framesMax
+        if (this.image !== this.sprites.jump.image) {
+          this.image = this.sprites.jump.image
+          this.framesMax = this.sprites.jump.framesMax
+          }
       break  
     }
   }
