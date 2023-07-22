@@ -88,7 +88,7 @@ class Sprite {
         this.framesElapsed = 0
         this.framesHold = 5,
         this.sprites = sprites
-        
+
         for (const sprite in this.sprites) {
           sprites[sprite].image = new Image()
           sprites[sprite].image.src = sprites[sprite].imageSrc
@@ -120,21 +120,27 @@ class Sprite {
       this.isAttacking = false
     }, 100)
   }
+
+  switchSprite(sprite) {
+    switch (sprite) {
+      case 'idle':
+        if (this.image !== this.sprites.idle.image) {
+      this.image = this.sprites.idle.image
+      this.framesMax = this.sprites.idle.framesMax
+        }
+      break
+      case 'run':
+        if (this.image !== this.sprites.run.image) {
+        this.image = this.sprites.run.image
+        this.framesMax = this.sprites.run.framesMax
+        }
+      break
+      case 'jump':
+        this.image = this.sprites.jump.image
+        this.framesMax = this.sprites.jump.framesMax
+      break  
+    }
+  }
 }
 
-// draw() {
-    //     c.fillStyle = this.color
-    //     // Character is drawn
-    //     c.fillRect(this.position.x, this.position.y, this.width, this.height)
-        
-    //     // attack box 
-    //     if (this.isAttacking) {
-    //     c.fillStyle = 'green'
-    //     c.fillRect(
-    //       this.attackBox.position.x, 
-    //       this.attackBox.position.y, 
-    //       this.attackBox.width, 
-    //       this.attackBox.height
-    //       )
-    //     }
-    // }
+

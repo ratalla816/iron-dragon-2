@@ -11,7 +11,7 @@ Background sprite 1024 x 576 DONE
 Shop sprite with animation DONE
 Player sprite (Samurai Mack)
 *Idle DONE
-*Run
+*Run DONE
 *Jump 
 *Attack
 Enemy sprite (Kenji)
