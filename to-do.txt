@@ -8,7 +8,7 @@ Game Timers and Game Over 1:44 DONE
 
 Sprites and Animation
 Background sprite 1024 x 576 DONE
-Shop sprite with animation
+Shop sprite with animation DONE
 Player sprite (Samurai Mack)
 Enemy sprite (Kenji)
 Interface design and animation
