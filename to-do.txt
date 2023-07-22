@@ -10,6 +10,14 @@ Sprites and Animation
 Background sprite 1024 x 576 DONE
 Shop sprite with animation DONE
 Player sprite (Samurai Mack)
+*Idle DONE
+*Run
+*Jump 
+*Attack
 Enemy sprite (Kenji)
+*Idle
+*Run
+*Jump
+*Attack
 Interface design and animation
 pushing live

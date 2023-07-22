@@ -39,8 +39,25 @@ const player = new Fighter({
   offset: {
     x: 0,
     y: 0
+   },
+   imageSrc: './assets/images/samuraiMack/idle.png',
+   framesMax: 8, 
+   scale: 2.5, 
+   offset: {
+    x: 215,
+    y: 157
+  },
+  sprites: {
+    idle: {
+      imageSrc: './assets/images/samuraiMack/Idle.png',
+      framesMax: 8
+    },
+    run: {
+      imageSrc: './assets/images/samuraiMack/Run.png',
+      framesMax: 8
+      // image: new Image()
+    }, 
   }
-//   velocity: { x: 0, y: 0 } means player will not move by default 
 })
 
 
@@ -58,8 +75,18 @@ const enemy = new Fighter({
     offset: {
       x: -50,
       y: 0
-    }
-  //   velocity: { x: 0, y: 0 } means enemy will not move by default 
+    },
+    // sprites: {
+    //   idle: {
+    //     imageSrc: './assets/images/samuraiMack/Idle.png',
+    //     framesMax: 8
+    //   },
+    //   run: {
+    //     imageSrc: './assets/images/samuraiMack/Run.png',
+    //     framesMax: 8
+    //     // image: new Image()
+    //   }, 
+    // }
   })
 
 
@@ -93,7 +120,7 @@ function animate() {
     background.update()
     shop.update()
     player.update()
-    enemy.update()
+    // enemy.update()
     // console.log('go');
 
     player.velocity.x = 0 /* Holds the player in one spot after the movement key is released */
@@ -102,6 +129,7 @@ function animate() {
     // Player movement
     if (keys.a.pressed && player.lastKey === 'a') {
       player.velocity.x = -5  /* pixels per frame */
+      player.image = player.sprites.run.image
     } else if (keys.d.pressed && player.lastKey === 'd') {
       player.velocity.x = 5  /* pixels per frame */
     }
