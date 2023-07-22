@@ -5,3 +5,11 @@ Attacks - 1:11 mark, https://www.youtube.com/watch?v=vyqbNFMDRGQ&t=47s
 Attacks - DONE
 Health Bar Interface 1:30 https://www.youtube.com/watch?v=vyqbNFMDRGQ&t=47s DONE
 Game Timers and Game Over 1:44 DONE
+
+Sprites and Animation
+Background sprite
+Shop sprite with animation
+Player sprite (Samurai Mack)
+Enemy sprite (Kenji)
+Interface design and animation
+pushing live
