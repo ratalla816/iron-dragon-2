@@ -60,10 +60,14 @@ const player = new Fighter({
       imageSrc: './assets/images/samuraiMack/Jump.png',
       framesMax: 2
     },
-    attack: {
+    fall: {
+      imageSrc: './assets/images/samuraiMack/Fall.png',
+      framesMax: 2
+    },
+    attack1: {
       imageSrc: './assets/images/samuraiMack/Attack1.png',
-      framesMax: 8
-    }, 
+      framesMax: 6
+    } 
   }
 })
 
@@ -134,17 +138,21 @@ function animate() {
     enemy.velocity.x = 0 /* Holds the enemy in one spot after the movement key is released */
 
     // Player movement
-    player.switchSprite('idle')
+    
     if (keys.a.pressed && player.lastKey === 'a') {
       player.velocity.x = -5  /* pixels per frame */
       player.switchSprite('run')
     } else if (keys.d.pressed && player.lastKey === 'd') {
       player.velocity.x = 5  /* pixels per frame */
       player.switchSprite('run')
+    } else {
+      player.switchSprite('idle')
     }
 
     if (player.velocity.y < 0) {
       player.switchSprite('jump')
+    } else if (player.velocity.y > 0) {
+      player.switchSprite('fall')
     }
 
     // Enemy movement
