@@ -8,6 +8,14 @@ c.fillRect(0, 0, canvas.width, canvas.height)
 
 const gravity = 0.7 /* speed that players fall */
 
+const background = new Sprite({
+  position: {
+    x: 0,
+    y: 0
+  },
+  imageSrc: '/assets/images/background.png'
+})
+
 const player = new Fighter({
   position: {  
     x: 0,
@@ -109,6 +117,7 @@ function animate() {
     window.requestAnimationFrame(animate)
     c.fillStyle = 'black'
     c.fillRect(0, 0, canvas.width, canvas.height) /* doesn't draw anything when we call this method (prevents sprite from looking like smeared paint) */
+    background.update()
     player.update()
     enemy.update()
     // console.log('go');
