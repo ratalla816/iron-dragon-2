@@ -13,11 +13,10 @@ Player sprite (Samurai Mack)
 *Idle DONE
 *Run DONE
 *Jump DONE
-*Attack
-Enemy sprite (Kenji)
-*Idle
-*Run
-*Jump
-*Attack
+*Attack DONE
+Enemy sprite (Kenji) DONE
+React to sprite attacks
+Receive hit animation  3:20 mark
+Death animation
 Interface design and animation
 pushing live

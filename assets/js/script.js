@@ -40,7 +40,7 @@ const player = new Fighter({
     x: 0,
     y: 0
    },
-   imageSrc: './assets/images/samuraiMack/idle.png',
+   imageSrc: './assets/images/samuraiMack/Idle.png',
    framesMax: 8, 
    scale: 2.5, 
    offset: {
@@ -68,6 +68,14 @@ const player = new Fighter({
       imageSrc: './assets/images/samuraiMack/Attack1.png',
       framesMax: 6
     } 
+  },
+  attackBox: {
+    offset: {
+      x: 150,
+      y: 50
+    },
+    width: 150,
+    height: 50
   }
 })
 
@@ -87,18 +95,45 @@ const enemy = new Fighter({
       x: -50,
       y: 0
     },
-    // sprites: {
-    //   idle: {
-    //     imageSrc: './assets/images/samuraiMack/Idle.png',
-    //     framesMax: 8
-    //   },
-    //   run: {
-    //     imageSrc: './assets/images/samuraiMack/Run.png',
-    //     framesMax: 8
-    //     // image: new Image()
-    //   }, 
-    // }
-  })
+   imageSrc: './assets/images/kenji/Idle.png',
+   framesMax: 4, 
+   scale: 2.5, 
+   offset: {
+    x: 215,
+    y: 168
+  },
+  sprites: {
+    idle: {
+      imageSrc: './assets/images/kenji/Idle.png',
+      framesMax: 4
+    },
+    run: {
+      imageSrc: './assets/images/kenji/Run.png',
+      framesMax: 8
+    }, 
+    jump: {
+      imageSrc: './assets/images/kenji/Jump.png',
+      framesMax: 2
+    },
+    fall: {
+      imageSrc: './assets/images/kenji/Fall.png',
+      framesMax: 2
+    },
+    attack1: {
+      imageSrc: './assets/images/kenji/Attack1.png',
+      framesMax: 4
+    } 
+  },
+  attackBox: {
+    offset: {
+      x: -125,
+      y: 50
+    },
+    width: 150,
+    height: 50
+  }
+})
+  
 
 
 
@@ -131,14 +166,13 @@ function animate() {
     background.update()
     shop.update()
     player.update()
-    // enemy.update()
+    enemy.update()
     // console.log('go');
 
     player.velocity.x = 0 /* Holds the player in one spot after the movement key is released */
     enemy.velocity.x = 0 /* Holds the enemy in one spot after the movement key is released */
 
     // Player movement
-    
     if (keys.a.pressed && player.lastKey === 'a') {
       player.velocity.x = -5  /* pixels per frame */
       player.switchSprite('run')
@@ -158,32 +192,54 @@ function animate() {
     // Enemy movement
     if (keys.ArrowLeft.pressed && enemy.lastKey === 'ArrowLeft') {
       enemy.velocity.x = -5 /* pixels per frame */
+      enemy.switchSprite('run')
      } else if (keys.ArrowRight.pressed && enemy.lastKey === 'ArrowRight') {
        enemy.velocity.x = 5  /* pixels per frame */
-    }
+       enemy.switchSprite('run')
+      } else {
+        enemy.switchSprite('idle')
+      }
+
+      if (enemy.velocity.y < 0) {
+        enemy.switchSprite('jump')
+      } else if (enemy.velocity.y > 0) {
+        enemy.switchSprite('fall')
+      }
+
     // Detect for collision
     if (
         rectangularCollision({
           rectangle1: player,
           rectangle2: enemy
-        }) && player.isAttacking
+        }) && player.isAttacking && player.framesCurrent === 2
         ) {   
         player.isAttacking = false    
         enemy.health -= 20
         document.querySelector('#enemyHealth').style.width = enemy.health + '%'
        }
 
+      //  if player misses 
+      if (player.isAttacking && player.framesCurrent === 4) {
+        player.isAttacking = false
+      }
+
 if (
   rectangularCollision({
     rectangle1: enemy,
     rectangle2: player
-  }) && enemy.isAttacking
+  }) && enemy.isAttacking && enemy.framesCurrent === 2
   ) {   
   enemy.isAttacking = false    
   console.log('enemy attack successful')
   player.health -= 20
   document.querySelector('#playerHealth').style.width = player.health + '%'
 }
+
+// IF enemy misses
+if (player.isAttacking && player.framesCurrent === 2) {
+  player.isAttacking = false
+}
+
   // game over if health is zero
   if (enemy.health <= 0 || player.health <= 0) {
     determineWinner ({player, enemy, timerId})
@@ -223,7 +279,7 @@ window.addEventListener('keydown', (event) => {
       enemy.velocity.y = -20  /* pixels per frame */
       break
     case 'ArrowDown':
-      enemy.isAttacking = true
+      enemy.attack()
       break
     }
     // console.log(event.key)
