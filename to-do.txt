@@ -7,7 +7,7 @@ Health Bar Interface 1:30 https://www.youtube.com/watch?v=vyqbNFMDRGQ&t=47s DONE
 Game Timers and Game Over 1:44 DONE
 
 Sprites and Animation
-Background sprite
+Background sprite 1024 x 576
 Shop sprite with animation
 Player sprite (Samurai Mack)
 Enemy sprite (Kenji)
