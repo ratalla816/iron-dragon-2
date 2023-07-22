@@ -66,7 +66,7 @@ class Sprite {
         this.position.y += this.velocity.y
         // over time position.y will have 10 pixels added to it for each from we loop over - allows player to fall
 
-        if (this.position.y + this.height + this.velocity.y >= canvas.height) {
+        if (this.position.y + this.height + this.velocity.y >= canvas.height - 96 ) { /* 96 px is the height of the ground from the bottom of the canvas - players fall to the top of the ground*/
             this.velocity.y = 0
         } else
         this.velocity.y += gravity /* keeps players from dropping below the canvas */
