@@ -1,3 +1,5 @@
+
+// render background image
 class Sprite {
     constructor({ position, imageSrc }) {
         this.position = position

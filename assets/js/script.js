@@ -8,6 +8,7 @@ c.fillRect(0, 0, canvas.width, canvas.height)
 
 const gravity = 0.7 /* speed that players fall */
 
+// render background image
 const background = new Sprite({
   position: {
     x: 0,
@@ -74,42 +75,42 @@ const keys = {
   
   /* Last key pressed will only be equal to the value of the last key pressed */
 
-function rectangularCollision ({ rectangle1, rectangle2 }) {
-  return (
-    rectangle1.attackBox.position.x + rectangle1.attackBox.width >= rectangle2.position.x && 
-    rectangle1.attackBox.position.x <= rectangle2.position.x + rectangle2.width && 
-    rectangle1.attackBox.position.y + rectangle1.attackBox.height >= rectangle2.position.y
-    && rectangle1.attackBox.position.y <= rectangle2.position.y + rectangle2.height
-  )
-}
+// function rectangularCollision ({ rectangle1, rectangle2 }) {
+//   return (
+//     rectangle1.attackBox.position.x + rectangle1.attackBox.width >= rectangle2.position.x && 
+//     rectangle1.attackBox.position.x <= rectangle2.position.x + rectangle2.width && 
+//     rectangle1.attackBox.position.y + rectangle1.attackBox.height >= rectangle2.position.y
+//     && rectangle1.attackBox.position.y <= rectangle2.position.y + rectangle2.height
+//   )
+// }
 
-function determineWinner ({player, enemy, timerId}) {
-  clearTimeout (timerId)
-  document.querySelector('#displayText').style.display = 'flex'
-  if (player.health === enemy.health) {
-    document.querySelector('#displayText').innerHTML = 'Tie'
-    } else if (player.health > enemy.health) {
-      // Player with least damage at timeout wins 
-    document.querySelector('#displayText').innerHTML = 'Player One Wins'
-    } else if (player.health < enemy.health) {
-    document.querySelector('#displayText').innerHTML = 'Player Two Wins'
-  }
-}
+// function determineWinner ({player, enemy, timerId}) {
+//   clearTimeout (timerId)
+//   document.querySelector('#displayText').style.display = 'flex'
+//   if (player.health === enemy.health) {
+//     document.querySelector('#displayText').innerHTML = 'Tie'
+//     } else if (player.health > enemy.health) {
+//       // Player with least damage at timeout wins 
+//     document.querySelector('#displayText').innerHTML = 'Player One Wins'
+//     } else if (player.health < enemy.health) {
+//     document.querySelector('#displayText').innerHTML = 'Player Two Wins'
+//   }
+// }
 
-let timer = 60
-let timerId
-function decreaseTimer() {
-  if (timer > 0) {
-  timerId =  setTimeout (decreaseTimer, 1000)  
-  timer --
-  document.querySelector('#timer').innerHTML = timer
-  }
+// let timer = 60
+// let timerId
+// function decreaseTimer() {
+//   if (timer > 0) {
+//   timerId =  setTimeout (decreaseTimer, 1000)  
+//   timer --
+//   document.querySelector('#timer').innerHTML = timer
+//   }
 
-  if (timer === 0) {
+//   if (timer === 0) {
    
-    determineWinner ({player, enemy, timerId})
- }
-}
+//     determineWinner ({player, enemy, timerId})
+//  }
+// }
 
 decreaseTimer ()
 
