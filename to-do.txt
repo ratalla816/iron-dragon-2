@@ -15,8 +15,8 @@ Player sprite (Samurai Mack)
 *Jump DONE
 *Attack DONE
 Enemy sprite (Kenji) DONE
-React to sprite attacks
-Receive hit animation  3:20 mark
+React to sprite attacks DONE
+Receive hit animation  DONE
 Death animation
 Interface design and animation
 pushing live
