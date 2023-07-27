@@ -17,6 +17,6 @@ Player sprite (Samurai Mack)
 Enemy sprite (Kenji) DONE
 React to sprite attacks DONE
 Receive hit animation  DONE
-Death animation
+Death animation DONE
 Interface design and animation
 pushing live

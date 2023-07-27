@@ -281,7 +281,7 @@ animate()
 
 // Moves the player left or right when a or d key is pressed.
 window.addEventListener('keydown', (event) => {
-  // console.log(event.key);
+  if (!player.dead) {
     switch (event.key) {
     case 'd':
       keys.d.pressed = true
@@ -297,8 +297,13 @@ window.addEventListener('keydown', (event) => {
     case ' ': 
     player.attack()  
       break
+      }
+    }
+    
 
-    case 'ArrowRight':
+    if ( !enemy.dead) {
+    switch(event.key) {
+      case 'ArrowRight':
       keys.ArrowRight.pressed = true
       enemy.lastKey = 'ArrowRight'
       break
@@ -313,8 +318,10 @@ window.addEventListener('keydown', (event) => {
       enemy.attack()
       break
     }
-    // console.log(event.key)
-})
+  }
+  })
+
+    
 
 // stops the player from moving left or right when a or d is released.
 window.addEventListener('keyup', (event) => {
