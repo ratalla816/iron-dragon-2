@@ -18,5 +18,5 @@ Enemy sprite (Kenji) DONE
 React to sprite attacks DONE
 Receive hit animation  DONE
 Death animation DONE
-Interface design and animation
-pushing live
+Interface design and animation DONE
+pushing live DONE

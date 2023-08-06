@@ -181,6 +181,9 @@ function animate() {
     c.fillRect(0, 0, canvas.width, canvas.height) /* doesn't draw anything when we call this method (prevents sprite from looking like smeared paint) */
     background.update()
     shop.update()
+    // contrast between players and background
+    c.fillStyle = 'rgba(255, 255, 255, 0.15)'
+    c.fillRect(0, 0, canvas.width, canvas.height)
     player.update()
     enemy.update()
     // console.log('go');
@@ -234,7 +237,10 @@ function animate() {
         enemy.takeHit()  
         player.isAttacking = false    
         
-        document.querySelector('#enemyHealth').style.width = enemy.health + '%'
+        // document.querySelector('#enemyHealth').style.width = enemy.health + '%'
+        gsap.to('#enemyHealth', {
+          width: enemy.health + '%'
+        })
        }
 
          // if (
@@ -263,8 +269,11 @@ if (
   player.takeHit()  
   enemy.isAttacking = false    
   console.log('enemy attack successful')
-  document.querySelector('#playerHealth').style.width = player.health + '%'
-}
+  // document.querySelector('#playerHealth').style.width = player.health + '%'
+  gsap.to('#playerHealth', {
+    width: player.health + '%'
+  })
+  }
 
 // IF enemy misses
 if (enemy.isAttacking && enemy.framesCurrent === 2) {
