@@ -3,14 +3,18 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="icon" type="image/png" href="./assets/images/favicon.ico"> -->
+    <link rel="icon" type="image/png" href="./assets/images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
     <title>Iron Dragon</title>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" -->
-    <!-- integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"> -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" 
+     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
 <style>
     * {
        box-sizing: border-box;
@@ -18,6 +22,7 @@
       }
 </style>
 </head>
+
  <!-- _____
      |A .  |
      | / \ |
@@ -25,6 +30,7 @@
      |  T  |
      ---"--- 
       מְפַקֵד  -->
+      
 <body>
     <!-- Red container div -->
  <div style="position: relative; display: inline-block;">
@@ -37,9 +43,9 @@
         padding: 20px">
 
         <!-- Player health -->
-        <div style="position: relative; width: 100%; display: flex; justify-content: flex-end; border-top: 4px solid silver; border-bottom: 4px solid silver; border-left: 4px solid silver">
+        <div style="position: relative; width: 50%; display: flex; justify-content: flex-end; border-top: 4px solid silver; border-bottom: 4px solid silver; border-left: 4px solid silver; margin-top: 100px; margin-left: 420px">
             <div style= "background-color: red; height: 30px; width: 100%;"></div>
-            <div id="playerHealth" style="position: absolute; background: #818cf8; top: 0; right: 0; bottom: 0; width: 100%;"></div>
+            <div id="playerHealth" style="position: absolute; background: #818cf8; top: 0; right: 0; bottom: 0; width: 100%"></div>
             </div>
 
         <!-- timer -->
@@ -52,12 +58,13 @@
         align-items: center;
         justify-content: center;
         color: white;
-        border: 4px solid silver">
+        border: 4px solid silver; 
+        margin-top: 100px">
         30 
         </div>
 
         <!-- Enemy health -->
-        <div style="position: relative; width: 100%; border-top: 4px solid silver; border-bottom: 4px solid silver; border-right: 4px solid silver">
+        <div style="position: relative; width: 50%; border-top: 4px solid silver; border-bottom: 4px solid silver; border-right: 4px solid silver; margin-top: 100px; margin-right: 0px;">
         <div style= "background-color: red; height: 30px"></div>
         <div id="enemyHealth" style="position: absolute; background: #818cf8; top: 0; right: 0; bottom: 0; left: 0"></div>
         </div>
@@ -70,6 +77,7 @@
     color: white; 
     align-items: center; 
     justify-content: center;
+    margin-right: 20px;
     top: 0;
     right: 0;
     bottom: 0;
@@ -77,7 +85,10 @@
     display: none;
     ">Tie
     </div>
-    <canvas></canvas>
+    <div id="Top"></div>
+    <canvas id="Main" style="display: block; margin-top: 100px; margin-left: 425px;">
+    </canvas>
+    <div id="Bottom"></div>
  </div>
 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" 

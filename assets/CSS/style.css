@@ -1,0 +1,100 @@
+/* * {
+    border-color: black;
+    backdrop-color: black;
+    background-position: cover; 
+    background-color: black;
+};  */
+
+
+
+.Main 
+{
+    /* position: relative;
+    /* display: block; */
+    /* align-items: center;
+    inset: 0px;
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-direction: row; */ 
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    /* width: 98%; */
+    display: block;
+    /* background-color: black; */
+    /* background-position: cover; */
+ };
+
+
+
+ /* .displayText
+ { */
+    /* align-items: center;  */
+    /* justify-content: center; */
+    /* position: absolute;  */
+    /* top: 0;
+    right: 0;
+    bottom: 0; */
+    /* margin-left: 30px;  */
+    /* left: 0;
+    display: none */
+ /* }; */
+
+
+
+ .Top
+ {
+    height: 100px; 
+ };
+
+
+
+ /* @media screen and (max-width: 1400px) {
+     
+    .Main
+    {
+        margin-right: 825px !important;
+        margin-left: -925px !important
+    };
+  }; */
+
+ /* media queries for tablets and mobile phones *OK* */
+ /* @media screen and (max-width: 768px) {
+     
+    .Main
+    {
+        margin-right: 425px !important
+    };
+  }; */
+  
+  /* media queries for mobile phones and smaller */
+  /* @media screen and (max-width: 575px) {
+
+    .Main
+    {
+        margin-right: 425px !important
+    };
+  
+  }; */
+
+  /* media queries for mobile phones and smaller *OK* */
+  /* @media screen and (max-width: 420px) {
+  
+    .Main
+    {
+        margin-right: 425px !important
+    };
+
+  }; */
+
+  /* media queries for mobile phones and smaller *OK* */
+  /* @media screen and (max-width: 375px) {
+  
+    .Main
+    {
+        margin-right: 425px !important
+    };
+
+  }; */
+  
+  

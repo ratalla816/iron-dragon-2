@@ -1,8 +1,14 @@
 const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
 
-canvas.width = 1024
-canvas.height = 576
+
+// canvas.width = 1024
+// canvas.height = 576
+
+Main.width = 1024
+Main.height = 576
+
+// Main.style.position = ""
 
 c.fillRect(0, 0, canvas.width, canvas.height)
 
