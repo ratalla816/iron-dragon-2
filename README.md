@@ -29,13 +29,14 @@
   - [Contact](#contact)
 
   ## Documentation
-  
-  * TBD 
+  ![Screenshot](./assets/images/playerControls.jpg) 
+  <br>
+  ![Screenshot](./assets/images/refreshRestart.jpg) 
+
 
   ## Deployment
 
-  This application is deployed using GitHub Pages:
-  <br> <https://ratalla816.github.io/iron-dragon-2/>
+  This application is deployed using GitHub Pages: <https://ratalla816.github.io/iron-dragon-2>
  
   ## Usage
 
@@ -51,11 +52,25 @@
   ![Screenshot](./assets/images/TBD.jpg)
 
   ## Features
-  * TBD 
+  * Background sprite 1024 x 576 
+    Shop sprite with animation 
+    Player sprite (Samurai Mack)
+   *Idle 
+   *Run 
+   *Jump 
+   *Attack 
+    Enemy sprite (Kenji) 
+    React to sprite attacks 
+    Receive hit animation  
+    Death animation 
+    Interface design and animation 
+    Health Bar Interface 
+    Game Timers and Game Over 
 
   # Acknowledgements
   
-  * Environment Asset: https://brullov.itch.io/oak-woods
+  * Chris Courses, "JavaScript Fighting Game Tutorial": <https://www.youtube.com/watch?v=vyqbNFMDRGQ&t=47s>
+  * Environment Assets: <https://brullov.itch.io/oak-woods>
     
   ## License
   ![badge](https://img.shields.io/badge/license-MIT-important)
