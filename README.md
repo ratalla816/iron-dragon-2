@@ -14,7 +14,7 @@
   
   ## Description
    
-   A web based 2 player fighting game built with JavaScript and HTML canvas. 
+   A web based, two player fighting game built with JavaScript and HTML canvas. 
    <br>
    The addition of professional sprite sheets and graphics ensures the gameplay stays action packed and visually impressive. 
    Sprite animations are optimized using GSAP, a professional-grade JavaScript library so users can expect extra smooth performance.  
@@ -56,11 +56,12 @@
  
 
   ## Screenshot
-  ![Screenshot](./assets/images/TBD.jpg)
+  ![Screenshot](./assets/images/gameplay_2.gif)
   <br>
-  ![Screenshot](./assets/images/TBD.jpg)
   <br>
-  ![Screenshot](./assets/images/TBD.jpg)
+  ![Screenshot](./assets/images/tie2.jpg)
+  
+  
 
   ## Features
  
