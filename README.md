@@ -34,9 +34,9 @@
   - [Contact](#contact)
 
   ## Documentation
-  ![Documentation](./assets/images/playerControls.jpg) 
+  ![Documentation](./assets/images/playerControls2.jpg) 
   <br>
-  ![Documentation](./assets/images/refreshRestart.jpg) 
+  ![Documentation](./assets/images/refreshRestart2.jpg) 
 
 
   ## Deployment
